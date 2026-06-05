@@ -1,23 +1,20 @@
-/*
-This is the c configuration file for the keymap
-
-Copyright 2012 Jun Wako <wakojun@gmail.com>
-Copyright 2015 Jack Humbert
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
 #pragma once
 
+// Flash each half by specifying it's location in the EEPROM.
 #define EE_HANDS
+
+// Let's both halves detect which half is the master and which is the slave.
 #define SPLIT_USB_DETECT
+
+// Base tap/hold decision window for home-row mods in ms.
+#define TAPPING_TERM 160
+
+// Disable quick-tap auto-repeat behavior for tap-hold keys.
+#define QUICK_TAP_TERM 0
+
+// During fast typing, resolve tap-hold keys as taps sooner.
+#define FLOW_TAP_TERM 140
+
+// Prefer same-hand rolling sequences as taps and opposite-hand chords as holds.
+// This helps home-row mods behave naturally while typing fast.
+#define CHORDAL_HOLD
