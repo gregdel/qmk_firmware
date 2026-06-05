@@ -9,8 +9,9 @@
 // Base tap/hold decision window for home-row mods in ms.
 #define TAPPING_TERM 160
 
-// Disable quick-tap auto-repeat behavior for tap-hold keys.
-#define QUICK_TAP_TERM 0
+// Allow tap-then-hold repeat on tap-hold keys.
+// Example: tap A, then quickly press-and-hold A => "aaaaaaaa".
+#define QUICK_TAP_TERM 120
 
 // During fast typing, resolve tap-hold keys as taps sooner.
 #define FLOW_TAP_TERM 140
